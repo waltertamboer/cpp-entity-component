@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{931a4398-2c96-4e16-b3bc-c5768a020b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Subsystems">
+      <UniqueIdentifier>{d2d2ced4-c3d5-4014-b942-a152856574aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{1df7ce27-4675-4a7a-bb0a-3a8a5cf7334a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{7805166d-97a2-415b-b403-50724e0c476e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\Entity\Entity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Application.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\PrecompiledHeader.cpp" />
+    <ClCompile Include="..\source\Component\AudioListener.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Component\AudioSource.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Component\Transform.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Math\Matrix44.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Math\Quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Math\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\AbstractSubsystem.cpp">
+      <Filter>Subsystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\AudioSubsystem.cpp">
+      <Filter>Subsystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\GameplaySubsystem.cpp">
+      <Filter>Subsystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\GraphicsSubsystem.cpp">
+      <Filter>Subsystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\NetworkSubsystem.cpp">
+      <Filter>Subsystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Component\AbstractComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Entity\EntityFactory.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\includes\Components\IComponent.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Entity\Entity.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Components\AudioListener.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Components\AudioSource.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Components\Transform.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Math\Matrix44.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Math\Quaternion.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Math\Vector3.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\AbstractSubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\AudioSubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\GameplaySubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\GraphicsSubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\ISubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Subsystem\NetworkSubsystem.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Application.hpp" />
+    <ClInclude Include="..\includes\PrecompiledHeader.hpp" />
+    <ClInclude Include="..\includes\Subsystem\SubsystemId.hpp">
+      <Filter>Subsystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Components\AbstractComponent.hpp">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Entity\EntityFactory.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

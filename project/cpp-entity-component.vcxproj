@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\Application.cpp" />
+    <ClCompile Include="..\source\Component\AbstractComponent.cpp" />
+    <ClCompile Include="..\source\Component\AudioListener.cpp" />
+    <ClCompile Include="..\source\Component\AudioSource.cpp" />
+    <ClCompile Include="..\source\Component\Transform.cpp" />
+    <ClCompile Include="..\source\Entity\Entity.cpp" />
+    <ClCompile Include="..\source\Entity\EntityFactory.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\Math\Matrix44.cpp" />
+    <ClCompile Include="..\source\Math\Quaternion.cpp" />
+    <ClCompile Include="..\source\Math\Vector3.cpp" />
+    <ClCompile Include="..\source\PrecompiledHeader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\source\Subsystem\AbstractSubsystem.cpp" />
+    <ClCompile Include="..\source\Subsystem\AudioSubsystem.cpp" />
+    <ClCompile Include="..\source\Subsystem\GameplaySubsystem.cpp" />
+    <ClCompile Include="..\source\Subsystem\GraphicsSubsystem.cpp" />
+    <ClCompile Include="..\source\Subsystem\NetworkSubsystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\includes\Application.hpp" />
+    <ClInclude Include="..\includes\Components\AbstractComponent.hpp" />
+    <ClInclude Include="..\includes\Components\AudioListener.hpp" />
+    <ClInclude Include="..\includes\Components\AudioSource.hpp" />
+    <ClInclude Include="..\includes\Components\IComponent.hpp" />
+    <ClInclude Include="..\includes\Components\Transform.hpp" />
+    <ClInclude Include="..\includes\Entity\Entity.hpp" />
+    <ClInclude Include="..\includes\Entity\EntityFactory.hpp" />
+    <ClInclude Include="..\includes\Math\Matrix44.hpp" />
+    <ClInclude Include="..\includes\Math\Quaternion.hpp" />
+    <ClInclude Include="..\includes\Math\Vector3.hpp" />
+    <ClInclude Include="..\includes\PrecompiledHeader.hpp" />
+    <ClInclude Include="..\includes\Subsystem\AbstractSubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\AudioSubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\GameplaySubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\GraphicsSubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\ISubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\NetworkSubsystem.hpp" />
+    <ClInclude Include="..\includes\Subsystem\SubsystemId.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09F12660-C41D-4C9B-B51C-0F8CB37A14D1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cppentitycomponent</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
