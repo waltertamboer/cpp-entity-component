@@ -1,7 +1,7 @@
 cpp-entity-component
 ====================
 
-A conceptual entity component framework for computer games.
+A conceptual entity component framework for computer games made in a couple of hours...
 
 This framework exists out of three parts:
 - Subsystems
@@ -15,3 +15,11 @@ An entity is a container for components and does not contain and application log
 The subsystems are used to manage components. For example; the audio subsystem manages all Audio related components. This way the application doesn't have to iterate through thousands of components and can delegate to the subsystems.
 
 This way is also becomes possible to effectively start different threads and handle components only there. For example, a graphics renderer could make use of all the SPU's that a Playstation 3 contains while the gameplay code could be executed solely on the CPU.
+
+TODO
+----
+- Add exceptions where needed
+- Add documentation to the code
+- Create more descriptive namespaces
+- Create subprojects to seperate the library code from the example game code
+- Much, much more :)
