@@ -22,6 +22,9 @@
     <ClCompile Include="..\source\Math\Matrix44.cpp" />
     <ClCompile Include="..\source\Math\Quaternion.cpp" />
     <ClCompile Include="..\source\Math\Vector3.cpp" />
+    <ClCompile Include="..\source\MyApplication\MyApplication.cpp" />
+    <ClCompile Include="..\source\MyApplication\PingPongMovement.cpp" />
+    <ClCompile Include="..\source\MyApplication\MyAISubsystem.cpp" />
     <ClCompile Include="..\source\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -44,6 +47,10 @@
     <ClInclude Include="..\includes\Math\Matrix44.hpp" />
     <ClInclude Include="..\includes\Math\Quaternion.hpp" />
     <ClInclude Include="..\includes\Math\Vector3.hpp" />
+    <ClInclude Include="..\includes\MyApplication\MyAISubsystem.hpp" />
+    <ClInclude Include="..\includes\MyApplication\MyApplication.hpp" />
+    <ClInclude Include="..\includes\MyApplication\MySubsystemId.hpp" />
+    <ClInclude Include="..\includes\MyApplication\PingPongMovement.hpp" />
     <ClInclude Include="..\includes\PrecompiledHeader.hpp" />
     <ClInclude Include="..\includes\Subsystem\AbstractSubsystem.hpp" />
     <ClInclude Include="..\includes\Subsystem\AudioSubsystem.hpp" />

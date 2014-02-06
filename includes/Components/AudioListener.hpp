@@ -16,6 +16,14 @@ namespace CppEntityComponent
 	public:
 		AudioListener();
 		virtual ~AudioListener();
+
+		/**
+		 * Checks if this component is interested in the subsystem with the given id.
+		 *
+		 * @param[in] id The id of the subsystem.
+		 * @return Returns true when the component is interested; false otherwise.
+		 */
+		virtual bool acceptsSubsystem(int id) const;
 	};
 }
 

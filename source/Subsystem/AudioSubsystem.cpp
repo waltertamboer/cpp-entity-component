@@ -23,5 +23,8 @@ namespace CppEntityComponent
 
 	void AudioSubsystem::update()
 	{
+		ComponentCollection components = getComponents();
+
+		std::cout << "components count: " << components.size() << std::endl;
 	}
 }

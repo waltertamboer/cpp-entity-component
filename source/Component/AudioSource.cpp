@@ -8,6 +8,7 @@
 #include "Components/IComponent.hpp"
 #include "Components/AbstractComponent.hpp"
 #include "Components/AudioSource.hpp"
+#include "Subsystem/SubsystemId.hpp"
 
 namespace CppEntityComponent
 {
@@ -18,6 +19,11 @@ namespace CppEntityComponent
 
 	AudioSource::~AudioSource()
 	{
+	}
+
+	bool AudioSource::acceptsSubsystem(int id) const
+	{
+		return id == SubsystemIdAudio;
 	}
 
 	AudioClip* AudioSource::getClip() const

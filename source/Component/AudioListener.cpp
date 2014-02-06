@@ -8,6 +8,7 @@
 #include "Components/IComponent.hpp"
 #include "Components/AbstractComponent.hpp"
 #include "Components/AudioListener.hpp"
+#include "Subsystem/SubsystemId.hpp"
 
 namespace CppEntityComponent
 {
@@ -17,5 +18,10 @@ namespace CppEntityComponent
 
 	AudioListener::~AudioListener()
 	{
+	}
+
+	bool AudioListener::acceptsSubsystem(int id) const
+	{
+		return id == SubsystemIdNetwork;
 	}
 }
